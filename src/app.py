@@ -1,7 +1,7 @@
 from langchain_ollama import ChatOllama
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from ragclass import RagPrompt
+from ragclass import RAGApplication
 from retriever import DuckDBRetriever
 import streamlit as st
 
@@ -30,7 +30,7 @@ llm = ChatOllama(
 parser = StrOutputParser()
 rag_chain = prompt | llm | parser
 retriever = DuckDBRetriever(db_path='documents_with_embeddings.db', k=4)
-rag_application = RagPrompt(retriever, rag_chain)
+rag_application = RAGApplication(retriever, rag_chain)
 
 
 question = st.text_input("Enter your question:", "")
