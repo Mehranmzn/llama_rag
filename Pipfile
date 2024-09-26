@@ -4,8 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+langchain = "*"
+langchain_community = "*"
+langchain-openai = "*"
+scikit-learn = "*"
+langchain-ollama = "*"
+bs4 = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.8"
+python_version = "3.12"
