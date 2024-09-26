@@ -10,6 +10,7 @@ langchain-openai = "*"
 scikit-learn = "*"
 langchain-ollama = "*"
 bs4 = "*"
+duckdb = "*"
 
 [dev-packages]
 
